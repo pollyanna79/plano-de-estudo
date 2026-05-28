@@ -1,0 +1,203 @@
+/* ==========================================
+   Configurações Globais e Reset Simples
+   ========================================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* ==========================================
+   Navegação Principal (Dias da Semana)
+   ========================================== */
+.navegacao-dias {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.btn-dia {
+  flex: 1;
+  padding: 12px 8px;
+  border: none;
+  background-color: #e0e0e0;
+  color: #555;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-dia:hover {
+  background-color: #d0d0d0;
+}
+
+.btn-dia.ativo {
+  background-color: #3498db;
+  color: white;
+  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.3);
+}
+
+/* ==========================================
+   Painel de Conteúdo Principal
+   ========================================== */
+.painel-estudo {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.painel-estudo h2 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.badge-foco {
+  background-color: #e8f4fd;
+  color: #2980b9;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+/* ==========================================
+   Menu de Abas Internas (Sub-navegação)
+   ========================================== */
+.menu-abas {
+  display: flex;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 25px;
+  gap: 4px;
+}
+
+.btn-aba {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 12px 5px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #718096;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s ease;
+}
+
+.btn-aba:hover {
+  color: #4a5568;
+  background-color: #f7fafc;
+}
+
+.btn-aba.aba-ativa {
+  color: #3182ce;
+  border-bottom: 2px solid #3182ce;
+  font-weight: bold;
+}
+
+/* Animação suave ao trocar de aba */
+.conteudo-aba-dinamico {
+  min-height: 200px; 
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(6px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* ==========================================
+   Estilização dos Conteúdos das Abas
+   ========================================== */
+.conteudo-secao {
+  margin-bottom: 20px;
+}
+
+.conteudo-secao h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #f4f6f9;
+  padding-bottom: 8px;
+}
+
+/* Card da Teoria */
+.card-teoria {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.texto-explicativo {
+  line-height: 1.6;
+  color: #4a5568;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Listas da Prática e Passos */
+.lista-pratica, 
+.lista-passos {
+  padding-left: 20px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.lista-pratica li {
+  margin-bottom: 10px;
+  color: #2d3748;
+}
+
+.lista-passos li {
+  margin-bottom: 12px;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+/* Card de Alerta da Plataforma */
+.alerta-plataforma {
+  background-color: #fff7e6;
+  border-left: 4px solid #f39c12;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.alerta-plataforma h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #d35400;
+}
+
+.nome-plataforma {
+  text-decoration: underline;
+}
+
+/* Marcadores numéricos customizados para o passo a passo */
+.lista-passos ::marker {
+  color: #e67e22;
+  font-weight: bold;
+}
